@@ -8,12 +8,12 @@ Deploy specialized AI agents to inspect projects from every angle
 in parallel.
 "
   homepage "https://github.com/Crisbr10/sequoia"
-  version "1.0.8"
+  version "1.0.9"
   license "MIT"
 
   on_macos do
-    url "https://github.com/Crisbr10/sequoia/releases/download/v1.0.8/sequoia_1.0.8_darwin_all.tar.gz"
-    sha256 "b020b2a56d6965fd3e8bea1c3abc473ef3f08555c4abc77a9d3e0c7dc41e3ecf"
+    url "https://github.com/Crisbr10/sequoia/releases/download/v1.0.9/sequoia_1.0.9_darwin_all.tar.gz"
+    sha256 "4e7bd15e3771725aa08651277f5da53e3b30a94d0fb8650a3c167647d2930acd"
 
     define_method(:install) do
       bin.install "sequoia"
@@ -22,15 +22,15 @@ in parallel.
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Crisbr10/sequoia/releases/download/v1.0.8/sequoia_1.0.8_linux_amd64.tar.gz"
-      sha256 "cb06964c13ee529cd20948eea5c830b596bde760cd7da7502fd4fd5011417e52"
+      url "https://github.com/Crisbr10/sequoia/releases/download/v1.0.9/sequoia_1.0.9_linux_amd64.tar.gz"
+      sha256 "d1578faf1e8f66feca0aa5bd6faa0862e4eef63eab986d559a9c0186353dc3c5"
       define_method(:install) do
         bin.install "sequoia"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Crisbr10/sequoia/releases/download/v1.0.8/sequoia_1.0.8_linux_arm64.tar.gz"
-      sha256 "c793e0fd172f39506a370f25250fd052db57ada0e4e9ce8a21111fc7af76e1a5"
+      url "https://github.com/Crisbr10/sequoia/releases/download/v1.0.9/sequoia_1.0.9_linux_arm64.tar.gz"
+      sha256 "40b55bce046e3cadfb254bccdce9f21887d239cf0beb243ad879f074e85ca186"
       define_method(:install) do
         bin.install "sequoia"
       end
