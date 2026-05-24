@@ -13,7 +13,7 @@ in parallel.
 
   on_macos do
     url "https://github.com/Crisbr10/sequoia/releases/download/v1.0.16/sequoia_1.0.16_darwin_all.tar.gz"
-    sha256 "b85678c3d892bfccf7934cf27ef2db6a414364b4b578842ac84213c95639d11d"
+    sha256 "a74e1dc4cd354512a98a46d52f0882365fb8ad0312cdd03eb6feb2e6b325e5cc"
 
     define_method(:install) do
       bin.install "sequoia"
@@ -23,14 +23,14 @@ in parallel.
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/Crisbr10/sequoia/releases/download/v1.0.16/sequoia_1.0.16_linux_amd64.tar.gz"
-      sha256 "4951f1818755df6d71b04823fd32a6210addff8aff8b4f7288ae49efe6ea3d0e"
+      sha256 "da965edcbfa7f184f15fdca4f63141d3b01e22f1411c4166571c488fcbd6a9e5"
       define_method(:install) do
         bin.install "sequoia"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/Crisbr10/sequoia/releases/download/v1.0.16/sequoia_1.0.16_linux_arm64.tar.gz"
-      sha256 "95333abf50b5a37581eb543facd6756b5347f6980c13db5a3aadf11770ef6cad"
+      sha256 "8b529113d5537be5163bce33dc4e26da446639e6174e54ef25a503859364777d"
       define_method(:install) do
         bin.install "sequoia"
       end
